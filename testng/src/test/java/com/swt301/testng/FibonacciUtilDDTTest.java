@@ -15,20 +15,34 @@ import com.swt301.testng.fibo.FibonacciUtil;
  */
 public class FibonacciUtilDDTTest {
     
-    @DataProvider(name="initData")
-    public Integer[][] fibonacciTestData() {
-        return new Integer[][] {
+    @DataProvider(name="initGoodData")
+    public Object[][] fibonacciTestGoodInput() {
+        return new Object[][] {
+                     
                      {0, 0}, 
                      {1, 1}, 
                      {2, 1}, 
                      {3, 2}, 
                      {4, 3}, 
                      {5, 5}, 
-                     {6, 9}
+                     {6, 8}
                             };
     }
     
-    @Test(dataProvider = "initData")
+    @DataProvider(name="initBadData")
+    public Object[][] fibonacciTestBadInput() {
+        return new Object[][] {
+                     {0, 0}, 
+                     {1, 1}, 
+                     {2, 1}, 
+                     {3, 2}, 
+                     {4.5, 3}, 
+                     {-5, 5}, 
+                     {1000, 1000}
+                            };
+    }
+    
+    @Test(dataProvider = "initBadData")
     public void FibonacciUtilDDTTest(int actual, int expected){
         assertEquals( FibonacciUtil.Fibonacci(actual), expected);
     }

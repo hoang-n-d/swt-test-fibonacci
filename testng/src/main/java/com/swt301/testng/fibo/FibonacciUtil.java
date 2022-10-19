@@ -18,8 +18,7 @@ public class FibonacciUtil {
         int fn = 1;
  
         if (n < 0) {
-            throw new IllegalArgumentException("Invalid n. n must be a positive number");
-//            return -1;
+            throw new IllegalArgumentException("Invalid n. n must be a positive integer number");
         }else if (n == 0 || n == 1) {
             return n;
         } else {
