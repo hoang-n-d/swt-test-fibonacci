@@ -4,10 +4,7 @@ import java.util.Random;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import com.swt301.testng.listeners.InvokedMethodListener;
 
 // @Listeners(value = InvokedMethodListener.class)
 public class TestclassRetry {

@@ -73,7 +73,7 @@
           <configuration>
             <suiteXmlFiles>
               <!-- edit here -->
-              <suiteXmlFile>src/test/java/com/swt301/testng/suiltestall.xml</suiteXmlFile>
+              <suiteXmlFile>src/test/java/com/swt301/testng/SuiteTestAll.xml</suiteXmlFile>
             </suiteXmlFiles>
             <!-- <includes>**/*.java</includes> -->
           </configuration>
