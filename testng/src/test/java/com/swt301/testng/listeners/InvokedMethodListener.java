@@ -1,10 +1,8 @@
 package com.swt301.testng.listeners;
 
-import org.apache.commons.logging.Log;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 
 public class InvokedMethodListener implements ITestListener {
 
@@ -17,10 +15,6 @@ public class InvokedMethodListener implements ITestListener {
     public void onFinish(ITestContext context) {
         System.out.println("Finish: numbertest success: " + context.getPassedTests().size() + " numbertest failed: "
                 + context.getFailedTests().size() + " numbertest skipped: " + context.getSkippedTests().size());
-        // Reporter.log("Finish: numbertest success: " + context.getPassedTests().size()
-        // + " numbertest failed: "
-        // + context.getFailedTests().size() + " numbertest skipped: " +
-        // context.getSkippedTests().size());
     }
 
     @Override
