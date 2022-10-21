@@ -75,7 +75,8 @@ public class UserDTO {
 
     @Override
     public String toString() {
-        return userID + " " + fullName;
+        return "[" + userID + ", " + fullName + ", " + password + ", " + roleID
+                + ", " + status + "]";
     }
 
 }

@@ -21,7 +21,7 @@ public class UserDAO {
 
     private static final String LOGIN = "SELECT fullName,roleID,password FROM tblUsers WHERE userID = ? AND password = ?";
     private static final String SEARCH = "SELECT userID,fullName,roleID,status FROM tblUsers WHERE fullName like ?";
-    private static final String DELETE = "UPDATE tblUsers SET status = 0 WHERE userID = ?";
+    private static final String DELETE = "DELETE FROM tblUsers WHERE userID = ?";
     private static final String UPDATE = "UPDATE tblUsers SET fullName = ?, roleID=? WHERE userID = ?";
     private static final String CHECK_ID = "SELECT userID FROM tblUsers WHERE userID = ?";
     private static final String INSERT = "INSERT INTO tblUsers(userID, fullName, roleID, password, status) VALUES(?,?,?,?,?)";
