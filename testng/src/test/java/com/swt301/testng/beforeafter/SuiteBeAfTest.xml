@@ -4,6 +4,10 @@
         <classes>
             <class name="com.swt301.testng.beforeafter.BeforeAfterSuite" />
             <class name="com.swt301.testng.beforeafter.BeforeAfterClassTest" />
+        </classes>
+    </test>
+    <test name="test class orther">
+        <classes>
             <class name="com.swt301.testng.beforeafter.BeforeAfterMethodTest" />
         </classes>
     </test>

@@ -2,8 +2,10 @@ package com.swt301.testng.beforeafter;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class BeforeAfterMethodTest {
@@ -26,6 +28,16 @@ public class BeforeAfterMethodTest {
     @AfterMethod
     public void after() {
         System.out.println("run this After Method \n");
+    }
+
+    @BeforeTest
+    public void dataSetupBeforeTest() {
+        System.out.println("run this Before Test");
+    }
+
+    @AfterTest
+    public void dataSetupAfterTest() {
+        System.out.println("run this After Test");
     }
 
     @Test(priority = 3)

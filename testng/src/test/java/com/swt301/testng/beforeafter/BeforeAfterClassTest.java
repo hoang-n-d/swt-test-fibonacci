@@ -1,7 +1,9 @@
 package com.swt301.testng.beforeafter;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class BeforeAfterClassTest {
@@ -15,6 +17,16 @@ public class BeforeAfterClassTest {
     @AfterClass
     public void dataSetupAfterClass() {
         System.out.println("run this After Class 1");
+    }
+
+    @BeforeTest
+    public void dataSetupBeforeTest() {
+        System.out.println("run this Before Test");
+    }
+
+    @AfterTest
+    public void dataSetupAfterTest() {
+        System.out.println("run this After Test");
     }
 
     @Test
